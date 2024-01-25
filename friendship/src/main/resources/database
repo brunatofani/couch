@@ -1,0 +1,44 @@
+create table degree
+(
+    degree_id   bigint      not null
+        primary key,
+    description varchar(50) not null
+);
+
+create table degree_seq
+(
+    next_val bigint null
+);
+
+create table relationship_degree_user_seq
+(
+    next_val bigint null
+);
+
+create table user
+(
+    user_id bigint auto_increment
+        primary key,
+    name    varchar(250) not null
+);
+
+create table relationship_degree_user
+(
+    relationship_degree_user_id bigint not null
+        primary key,
+    main_user                   bigint null,
+    chosen_user                 bigint null,
+    degree_id                   bigint null,
+    constraint FK130fp82dxu69waghktqhrsc7r
+        foreign key (chosen_user) references user (user_id),
+    constraint FKdfb764rfsuj0jf7dxpnvbsqmu
+        foreign key (main_user) references user (user_id),
+    constraint FKtr5f92u8rfp8jg10qrgi2hf0i
+        foreign key (degree_id) references degree (degree_id)
+);
+
+create table user_seq
+(
+    next_val bigint null
+);
+
