@@ -12,3 +12,6 @@ the DDL is at friendship/src/main/kotlin/resources
 <img width="397" alt="image" src="https://github.com/brunatofani/couch/assets/4562451/f5ffffca-abab-44fb-8d5f-7a96d9ae1632">
 
 
+# Project 
+It`s a springBoot project and I coudn`t implement the tests
+
